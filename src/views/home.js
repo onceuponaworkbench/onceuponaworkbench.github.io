@@ -15,7 +15,8 @@ const Home = (props) => {
         <meta property="og:title" content="Once Website" />
         <link
           rel="canonical"
-          href="https://that-alarmed-squid-y5k0jb.teleporthq.app/"
+          // --- FIX 1: Canonical URL updated for SEO ---
+          href="https://onceuponaworkbench.com/" 
         />
       </Helmet>
       <Navigation></Navigation>
@@ -933,7 +934,7 @@ details[open] .faq-icon {
         <div className="home-container14">
           <Script
             html={`<style>
-        @keyframes heroLeafFloat {0%,100% {transform: translateY(0) rotate(0deg);}
+          @keyframes heroLeafFloat {0%,100% {transform: translateY(0) rotate(0deg);}
 25% {transform: translateY(-20px) rotate(10deg);}
 50% {transform: translateY(0) rotate(-10deg);}
 75% {transform: translateY(-15px) rotate(5deg);}}@keyframes heroSlideInLeft {0% {opacity: 0;
