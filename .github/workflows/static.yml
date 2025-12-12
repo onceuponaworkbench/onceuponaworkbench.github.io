@@ -31,27 +31,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # 1. NEW STEP: Set up Node.js environment (required for React build)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Use a stable Node version
+
+      # 2. NEW STEP: Install dependencies and RUN THE BUILD COMMAND
+      # This step installs packages and transpiles the React code into browser-compatible JS.
+      - name: Install dependencies and Build
+        run: |
+          npm install 
+          npm run build 
+
+      # 3. Setup Pages action (which is needed for the final deployment)
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # *** NEW STEP: Combine 'public' and 'src' into a unified '_site' folder ***
-      - name: Prepare Site Directory
-        run: |
-          # 1. Create the final deployment folder
-          mkdir _site
-          # 2. Move contents of 'public' (including index.html) into _site
-          mv public/* _site/
-          # 3. Copy the 'src' folder and its contents into _site
-          cp -r src _site/
-
-      # *** MODIFIED STEP: Upload the unified '_site' folder ***
+        
+      # 4. MODIFIED STEP: Upload the production code from the '/build' directory
+      # This is the standard output folder created by 'npm run build'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Point the uploader to the new unified folder
-          path: '_site' 
+          path: 'build' 
       
-      # *** The rest of the deployment is the same ***
+      # 5. The rest of the deployment is the same
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
