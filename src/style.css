@@ -1384,3 +1384,9 @@
     grid-template-columns: 1fr;
   }
 }
+/* --- HIDE TELEPORTHQ ATTRIBUTION BADGE --- */
+[data-thq="thq-footer"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+/* ------------------------------------------ */
