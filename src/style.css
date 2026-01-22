@@ -220,3 +220,13 @@ body {
 body {
     overflow-y: auto !important;
 }
+/* FORCE HIDE MENU ELEMENTS */
+[data-thq="thq-menu-btn"], 
+[data-thq="thq-mobile-menu"],
+.home-container21,
+.navigation-burger-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
