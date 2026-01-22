@@ -197,7 +197,7 @@
 /* --- RESPONSIVE --- */
 @media(max-width: 991px) {
   .home-thq-hero-content-wrapper-elm { flex-direction: column; text-align: center; }
-  .process-step { flex-direction: column !important; text-align: center !important; }
+  .process-step { flex-direction: column !important; text-align: center !important; justify-content: center !important;}
   .process-icon-wrapper { margin: 20px 0; }
-  .home-thq-process-timeline-line-elm { left: 40px; transform: none; }
+  .home-thq-process-timeline-line-elm { display: none; /* Hides the line on mobile to keep it clean */ }
 }
