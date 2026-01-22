@@ -586,3 +586,48 @@
     margin: auto;
   }
 }
+/* FORCE HORIZONTAL LAYOUT */
+.showcase-carousel {
+  display: flex !important;
+  flex-direction: row !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  gap: 24px !important;
+  padding-bottom: 20px !important;
+}
+
+.showcase-slide {
+  flex: 0 0 auto !important; /* Prevents images from stacking vertically */
+  width: 350px !important;    /* Adjust this width to your preference */
+  scroll-snap-align: center !important;
+}
+
+/* FIX HOVER TEXT */
+.showcase-card {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+}
+
+.showcase-caption {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+  padding: 20px !important;
+  transform: translateY(100%) !important; /* Hides it initially */
+  transition: transform 0.3s ease !important;
+}
+
+.showcase-card:hover .showcase-caption {
+  transform: translateY(0) !important; /* Slides it up on hover */
+}
+
+.showcase-card img {
+  width: 100% !important;
+  height: 400px !important;
+  object-fit: cover !important;
+}
