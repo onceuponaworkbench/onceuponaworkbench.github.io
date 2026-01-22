@@ -38,79 +38,81 @@ const Home = (props) => {
           </div>
           <div className="home-thq-hero-image-column-elm">
             <div className="hero-featured-image">
-              <img alt="Playhouse" src="/web1-1500h.png" loading="eager" />
+              {/* Added inline style to prevent giant image bug */}
+              <img alt="Playhouse" src="/web1-1500h.png" loading="eager" style={{width: '100%', maxHeight: '500px', objectFit: 'cover'}} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* FULL GALLERY SECTION */}
+      {/* FULL GALLERY CAROUSEL SECTION */}
       <section id="showcase" className="home-thq-showcase-section-elm">
-        <div id="gallery" className="home-thq-showcase-container-elm">
-          <h2 className="section-title">Our Playhouse Gallery</h2>
-          <p className="section-subtitle">Each project is a unique creation designed to bring joy.</p>
-          <div className="showcase-carousel">
-            <div className="showcase-slide">
-              <div className="showcase-card">
-                <img src="/web9-1500w.png" alt="Zelda Playhouse" />
-                <div className="showcase-caption">
-                  <h3 className="showcase-card-title">Link's Playhouse</h3>
-                  <p className="showcase-card-description">Inspired by Legend of Zelda: Breath of the Wild</p>
+        <div id="gallery" className="home-thq-showcase-container-elm thq-section-max-width">
+          <h2 className="section-title thq-heading-2">Our Playhouse Gallery</h2>
+          <p className="section-subtitle thq-body-large">Each project is a unique creation designed to bring joy.</p>
+          <div className="home-thq-showcase-carousel-wrapper-elm">
+            <div className="showcase-carousel">
+              {[
+                { src: "/web9-1500w.png", title: "Link's Playhouse", desc: "Inspired by Legend of Zelda" },
+                { src: "/web14-1500w.png", title: "Hobbit Hole", desc: "Under-the-stairs playspace" },
+                { src: "/web8-1500w.png", title: "Farmhouse Tavern", desc: "Fantasy meets farmhouse" },
+                { src: "/web10-1500w.png", title: "Mystery Shack", desc: "Inspired by Gravity Falls" }
+              ].map((item, index) => (
+                <div className="showcase-slide" key={index}>
+                  <div className="showcase-card">
+                    <img src={item.src} alt={item.title} />
+                    <div className="showcase-caption">
+                      <h3 className="showcase-card-title">{item.title}</h3>
+                      <p className="showcase-card-description">{item.desc}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="showcase-slide">
-              <div className="showcase-card">
-                <img src="/web14-1500w.png" alt="Hobbit Hole" />
-                <div className="showcase-caption">
-                  <h3 className="showcase-card-title">Hobbit Hole</h3>
-                  <p className="showcase-card-description">A Hobbit inspired under-the-stairs playspace</p>
-                </div>
-              </div>
-            </div>
-            <div className="showcase-slide">
-              <div className="showcase-card">
-                <img src="/web8-1500w.png" alt="Farmhouse Tavern" />
-                <div className="showcase-caption">
-                  <h3 className="showcase-card-title">Farmhouse Tavern</h3>
-                  <p className="showcase-card-description">Fantasy inspired tavern with farmhouse appeal</p>
-                </div>
-              </div>
-            </div>
-             <div className="showcase-slide">
-              <div className="showcase-card">
-                <img src="/web10-1500w.png" alt="Mystery Shack" />
-                <div className="showcase-caption">
-                  <h3 className="showcase-card-title">Mystery Shack</h3>
-                  <p className="showcase-card-description">Inspired by Gravity Falls</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* FULL CONTACT SECTION */}
-      <section id="quote" className="home-thq-contact-section-elm">
-        <div className="home-thq-contact-container-elm">
-          <div className="home-thq-contact-form-card-elm">
-             <img alt="Logo" src="/website logo-1500h.png" className="home-image19" style={{maxWidth: '200px', margin: '0 auto 20px'}} />
-             <h2 className="section-title">Start Your Playhouse Build</h2>
-             <p className="section-subtitle">Share your vision, and let's create something magical.</p>
-             <form action="/submit" method="POST" className="home-thq-contact-form-elm">
-                <div className="contact-form-group">
+      {/* FAQ SECTION */}
+      <section id="faq" className="home-thq-faq-section-elm thq-section-padding">
+        <div className="thq-section-max-width">
+          <h2 className="section-title thq-heading-2">Frequently Asked Questions</h2>
+          <div className="home-thq-faq-grid-elm thq-grid-2">
+            <div className="faq-category">
+              <details className="faq-item">
+                <summary className="faq-question"><span className="faq-question-text">How much does a playhouse cost?</span></summary>
+                <div className="faq-answer"><p className="section-content">Typically $3,500 to $12,000 depending on complexity.</p></div>
+              </details>
+              <details className="faq-item">
+                <summary className="faq-question"><span className="faq-question-text">Do you offer payment plans?</span></summary>
+                <div className="faq-answer"><p className="section-content">Yes, we offer flexible deposit-based payment schedules.</p></div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CENTERED CONTACT SECTION */}
+      <section id="quote" className="home-thq-contact-section-elm thq-section-padding">
+        <div className="home-thq-contact-container-elm thq-section-max-width">
+          <div className="home-thq-contact-form-card-elm thq-flex-column">
+             <img alt="Logo" src="/website logo-1500h.png" style={{maxWidth: '150px', marginBottom: '20px'}} />
+             <h2 className="section-title thq-heading-2">Start Your Playhouse Build</h2>
+             <p className="section-subtitle thq-body-large" style={{textAlign: 'center'}}>Share your vision with us.</p>
+             <form action="/submit" method="POST" className="home-thq-contact-form-elm thq-flex-column" style={{width: '100%', alignItems: 'center'}}>
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                   <label className="contact-label">Your Name</label>
-                  <input type="text" name="name" placeholder="John Smith" className="contact-input" required />
+                  <input type="text" name="name" placeholder="John Smith" className="contact-input thq-input" required style={{width: '100%', textAlign: 'center'}} />
                 </div>
-                <div className="contact-form-group">
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                   <label className="contact-label">Email Address</label>
-                  <input type="email" name="email" placeholder="you@example.com" className="contact-input" required />
+                  <input type="email" name="email" placeholder="you@example.com" className="contact-input thq-input" required style={{width: '100%', textAlign: 'center'}} />
                 </div>
-                <div className="contact-form-group">
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                   <label className="contact-label">Tell Us Your Idea</label>
-                  <textarea name="idea" rows="5" placeholder="Describe your dream playhouse..." className="contact-textarea" required></textarea>
+                  <textarea name="idea" rows="5" placeholder="Describe your dream..." className="contact-textarea thq-input" required style={{width: '100%', textAlign: 'center'}}></textarea>
                 </div>
-                <button type="submit" className="home-thq-btn-elm2 btn-primary btn-lg btn">
+                <button type="submit" className="home-thq-btn-elm2 btn-primary btn-lg btn thq-button-filled">
                   Send My Quote Request
                 </button>
              </form>
@@ -120,7 +122,6 @@ const Home = (props) => {
 
       <Footer></Footer>
 
-      {/* SCRIPTS */}
       <Script
         html={`
         <script>
@@ -135,12 +136,6 @@ const Home = (props) => {
             if (closeBtn && mobileMenu) {
               closeBtn.onclick = () => { mobileMenu.classList.remove('thq-active'); mobileMenu.style.display = 'none'; document.body.style.overflow = 'auto'; };
             }
-          })();
-
-          // CAROUSEL AUTO-SCROLL
-          (function() {
-            const carousel = document.querySelector(".showcase-carousel");
-            if (carousel) { carousel.style.overflowX = "auto"; }
           })();
         </script>
         `}
