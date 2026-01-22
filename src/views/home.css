@@ -54,6 +54,18 @@
   /* Increased opacity and blur to make text pop against movement */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85) !important;
 }
+.home-hero-title {
+    /* This forces the title to be white regardless of theme settings */
+    color: #ffffff !important; 
+    
+    /* This adds a heavy shadow to ensure it's punchy over the video */
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.9) !important;
+    
+    /* Ensure it's layered correctly */
+    position: relative;
+    z-index: 3;
+}
+
 .home-thq-hero-decorative-leaves-elm {
   top: 0;
   left: 0;
