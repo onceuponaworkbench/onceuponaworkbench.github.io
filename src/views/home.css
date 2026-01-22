@@ -39,10 +39,21 @@
   height: 100%;
   z-index: 2;
   position: absolute;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 15%, transparent) 0%, color-mix(in srgb, var(--color-secondary) 10%, transparent) 50%, color-mix(in srgb, var(--color-accent) 8%, transparent) 100%);
+  /* Darkened the background to act as a proper 'scrim' for white text */
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 0, 0, 0.6) 0%, 
+    rgba(0, 0, 0, 0.4) 50%, 
+    rgba(0, 0, 0, 0.6) 100%
+  ) !important;
   backdrop-filter: blur(2px);
 }
- 
+/* --- FIXED: Stronger Subtitle Shadow --- */
+.home-thq-hero-subtitle-elm {
+  color: #ffffff;
+  /* Increased opacity and blur to make text pop against movement */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85) !important;
+}
 .home-thq-hero-decorative-leaves-elm {
   top: 0;
   left: 0;
