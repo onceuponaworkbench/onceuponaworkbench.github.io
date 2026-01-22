@@ -207,3 +207,16 @@ body {
   opacity: 0 !important;
   pointer-events: none !important;
 }
+/* Remove hamburger menu completely */
+[data-thq="thq-menu-btn"], 
+[data-thq="thq-mobile-menu"],
+.home-container21 {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Fix Body Scroll if it was previously locked */
+body {
+    overflow-y: auto !important;
+}
