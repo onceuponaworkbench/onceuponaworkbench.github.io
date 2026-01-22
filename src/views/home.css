@@ -631,3 +631,49 @@
   height: 400px !important;
   object-fit: cover !important;
 }
+.home-thq-process-section-elm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.process-step-left { justify-content: flex-start; text-align: right; flex-direction: row-reverse; }
+.process-step-right { justify-content: flex-start; text-align: left; flex-direction: row; }
+
+.process-icon-wrapper {
+  background: var(--color-primary);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.process-content {
+  max-width: 400px;
+}
+
+.process-step-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-on-surface);
+  margin-bottom: 10px;
+}
+
+.process-step-description {
+  color: var(--color-on-surface-secondary);
+}
