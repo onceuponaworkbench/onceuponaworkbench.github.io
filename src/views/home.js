@@ -44,27 +44,75 @@ const Home = (props) => {
         </div>
       </section>
 
-      {/* RESTORED CONTENT - This is where your gallery and other sections live */}
+      {/* FULL GALLERY SECTION */}
       <section id="showcase" className="home-thq-showcase-section-elm">
-         <div className="home-thq-showcase-container-elm">
-            <h2 className="section-title">Our Playhouse Gallery</h2>
-            <div className="showcase-carousel">
-               {/* Simplified Slides for stability during test */}
-               <div className="showcase-slide"><div className="showcase-card"><img src="/web9-1500w.png" alt="Playhouse 1" /></div></div>
-               <div className="showcase-slide"><div className="showcase-card"><img src="/web14-1500w.png" alt="Playhouse 2" /></div></div>
+        <div id="gallery" className="home-thq-showcase-container-elm">
+          <h2 className="section-title">Our Playhouse Gallery</h2>
+          <p className="section-subtitle">Each project is a unique creation designed to bring joy.</p>
+          <div className="showcase-carousel">
+            <div className="showcase-slide">
+              <div className="showcase-card">
+                <img src="/web9-1500w.png" alt="Zelda Playhouse" />
+                <div className="showcase-caption">
+                  <h3 className="showcase-card-title">Link's Playhouse</h3>
+                  <p className="showcase-card-description">Inspired by Legend of Zelda: Breath of the Wild</p>
+                </div>
+              </div>
             </div>
-         </div>
+            <div className="showcase-slide">
+              <div className="showcase-card">
+                <img src="/web14-1500w.png" alt="Hobbit Hole" />
+                <div className="showcase-caption">
+                  <h3 className="showcase-card-title">Hobbit Hole</h3>
+                  <p className="showcase-card-description">A Hobbit inspired under-the-stairs playspace</p>
+                </div>
+              </div>
+            </div>
+            <div className="showcase-slide">
+              <div className="showcase-card">
+                <img src="/web8-1500w.png" alt="Farmhouse Tavern" />
+                <div className="showcase-caption">
+                  <h3 className="showcase-card-title">Farmhouse Tavern</h3>
+                  <p className="showcase-card-description">Fantasy inspired tavern with farmhouse appeal</p>
+                </div>
+              </div>
+            </div>
+             <div className="showcase-slide">
+              <div className="showcase-card">
+                <img src="/web10-1500w.png" alt="Mystery Shack" />
+                <div className="showcase-caption">
+                  <h3 className="showcase-card-title">Mystery Shack</h3>
+                  <p className="showcase-card-description">Inspired by Gravity Falls</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* CONTACT / QUOTE SECTION */}
+      {/* FULL CONTACT SECTION */}
       <section id="quote" className="home-thq-contact-section-elm">
         <div className="home-thq-contact-container-elm">
           <div className="home-thq-contact-form-card-elm">
-             <h2 className="section-title">Get a Quote</h2>
-             {/* The button you click scrolls here */}
-             <form className="home-thq-contact-form-elm">
-                <input type="text" placeholder="Name" className="contact-input" />
-                <button type="button" className="btn-primary btn-lg btn">Submit</button>
+             <img alt="Logo" src="/website logo-1500h.png" className="home-image19" style={{maxWidth: '200px', margin: '0 auto 20px'}} />
+             <h2 className="section-title">Start Your Playhouse Build</h2>
+             <p className="section-subtitle">Share your vision, and let's create something magical.</p>
+             <form action="/submit" method="POST" className="home-thq-contact-form-elm">
+                <div className="contact-form-group">
+                  <label className="contact-label">Your Name</label>
+                  <input type="text" name="name" placeholder="John Smith" className="contact-input" required />
+                </div>
+                <div className="contact-form-group">
+                  <label className="contact-label">Email Address</label>
+                  <input type="email" name="email" placeholder="you@example.com" className="contact-input" required />
+                </div>
+                <div className="contact-form-group">
+                  <label className="contact-label">Tell Us Your Idea</label>
+                  <textarea name="idea" rows="5" placeholder="Describe your dream playhouse..." className="contact-textarea" required></textarea>
+                </div>
+                <button type="submit" className="home-thq-btn-elm2 btn-primary btn-lg btn">
+                  Send My Quote Request
+                </button>
              </form>
           </div>
         </div>
@@ -72,29 +120,27 @@ const Home = (props) => {
 
       <Footer></Footer>
 
-      {/* --- SAFE SCRIPTS --- */}
+      {/* SCRIPTS */}
       <Script
         html={`
         <script>
-          // SAFE TOGGLE LOGIC (Won't freeze scrolling)
+          // NAVIGATION TOGGLE
           (function() {
             const menuBtn = document.querySelector('[data-thq="thq-menu-btn"]');
             const closeBtn = document.querySelector('[data-thq="thq-close-menu"]');
             const mobileMenu = document.querySelector('[data-thq="thq-mobile-menu"]');
-            
             if (menuBtn && mobileMenu) {
-              menuBtn.onclick = function() {
-                mobileMenu.style.display = 'flex';
-                mobileMenu.classList.add('thq-active');
-              };
+              menuBtn.onclick = () => { mobileMenu.style.display = 'flex'; mobileMenu.classList.add('thq-active'); };
             }
             if (closeBtn && mobileMenu) {
-              closeBtn.onclick = function() {
-                mobileMenu.classList.remove('thq-active');
-                mobileMenu.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Force scrolling back on
-              };
+              closeBtn.onclick = () => { mobileMenu.classList.remove('thq-active'); mobileMenu.style.display = 'none'; document.body.style.overflow = 'auto'; };
             }
+          })();
+
+          // CAROUSEL AUTO-SCROLL
+          (function() {
+            const carousel = document.querySelector(".showcase-carousel");
+            if (carousel) { carousel.style.overflowX = "auto"; }
           })();
         </script>
         `}
