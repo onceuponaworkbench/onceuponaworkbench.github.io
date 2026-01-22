@@ -92,6 +92,7 @@ details[open] .faq-icon {
     {/* This wrapper is the "hook" your CSS needs for the carousel layout */}
     <div className="home-thq-showcase-carousel-wrapper-elm">
       <div className="showcase-carousel">
+        <div className="showcase-slide">
         
         {/* Slide 1 */}
         <div className="showcase-slide">
