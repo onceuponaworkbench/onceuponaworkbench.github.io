@@ -113,27 +113,51 @@ details[open] .faq-icon { transform: rotate(180deg); }
       <section id="process" className="home-thq-process-section-elm">
         <div className="home-thq-process-timeline-line-elm"></div>
         <div className="home-thq-process-container-elm thq-section-max-width">
-          <div className="process-step">
-            <div className="process-icon-wrapper">1</div>
+          
+          {/* Step 1 */}
+          <div className="process-step process-step-left">
+            <div className="process-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
             <div className="process-content">
-              <h3 className="process-step-title">Consultation</h3>
-              <p className="process-step-description">We discuss your vision and budget.</p>
+              <h3 className="process-step-title">1. Consultation</h3>
+              <p className="process-step-description">We discuss your vision, space requirements, and budget to create a plan that fits your family perfectly.</p>
             </div>
           </div>
-          <div className="process-step">
-            <div className="process-icon-wrapper">2</div>
+
+          {/* Step 2 */}
+          <div className="process-step process-step-right">
+            <div className="process-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
             <div className="process-content">
-              <h3 className="process-step-title">Design</h3>
-              <p className="process-step-description">We build a custom 3D model.</p>
+              <h3 className="process-step-title">2. Design</h3>
+              <p className="process-step-description">Our team builds a custom 3D model of your playhouse so you can see the story come to life before we build.</p>
             </div>
           </div>
-          <div className="process-step">
-            <div className="process-icon-wrapper">3</div>
+
+          {/* Step 3 */}
+          <div className="process-step process-step-left">
+            <div className="process-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 22 1-1h3l9-9"></path><path d="M3 21v-3l9-9"></path><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"></path></svg>
+            </div>
             <div className="process-content">
-              <h3 className="process-step-title">Build</h3>
-              <p className="process-step-description">Handcrafted with care in Utah.</p>
+              <h3 className="process-step-title">3. Build</h3>
+              <p className="process-step-description">Using premium materials and expert craftsmanship, we hand-build your structure in our workshop.</p>
             </div>
           </div>
+
+          {/* Step 4 */}
+          <div className="process-step process-step-right">
+            <div className="process-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div className="process-content">
+              <h3 className="process-step-title">4. Install</h3>
+              <p className="process-step-description">We handle the heavy lifting with professional delivery and installation right in your backyard.</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
