@@ -80,40 +80,67 @@ details[open] .faq-icon {
         </div>
       </section>
 
-      <section id="showcase" className="home-thq-showcase-section-elm">
-        <div id="gallery" className="home-thq-showcase-container-elm">
-          <h2 className="home-thq-section-title-elm1 section-title">Our Playhouse Gallery</h2>
-          <p className="home-thq-section-subtitle-elm1 section-subtitle">Each project is a unique creation, designed to bring joy.</p>
-          <div className="home-thq-showcase-carousel-wrapper-elm">
-            <div className="showcase-carousel">
-              <div className="showcase-slide">
-                <div className="showcase-card">
-                  <img alt="Legend of Zelda inspired playhouse" src="/web9-1500w.png" loading="lazy" />
-                  <div className="showcase-caption"><h3 className="showcase-card-title">Link's Playhouse</h3><p className="showcase-card-description">Playhouse inspired by Legend of Zelda</p></div>
-                </div>
-              </div>
-              <div className="showcase-slide">
-                <div className="showcase-card">
-                  <img alt="Hobbit Hole" src="/web14-1500w.png" loading="lazy" />
-                  <div className="showcase-caption"><h3 className="showcase-card-title">Hobbit Hole</h3><p className="showcase-card-description">A Hobbit inspired playspace</p></div>
-                </div>
-              </div>
-              <div className="showcase-slide">
-                <div className="showcase-card">
-                  <img alt="Farmhouse" src="/web8-1500w.png" loading="lazy" />
-                  <div className="showcase-caption"><h3 className="showcase-card-title">Farmhouse Tavern</h3><p className="showcase-card-description">Fantasy inspired tavern</p></div>
-                </div>
-              </div>
-              <div className="showcase-slide">
-                <div className="showcase-card">
-                  <img alt="Zelda Dog" src="/web2-1500w.png" loading="lazy" />
-                  <div className="showcase-caption"><h3 className="showcase-card-title">Zelda Doghouse</h3><p className="showcase-card-description">Legend of Zelda doghouse</p></div>
-                </div>
-              </div>
+   <section id="showcase" className="home-thq-showcase-section-elm">
+  <div id="gallery" className="home-thq-showcase-container-elm">
+    <h2 className="home-thq-section-title-elm1 section-title">
+      Our Playhouse Gallery
+    </h2>
+    <p className="home-thq-section-subtitle-elm1 section-subtitle">
+      Each project is a unique creation, designed to bring joy and adventure to your backyard.
+    </p>
+    
+    {/* This wrapper is the "hook" your CSS needs for the carousel layout */}
+    <div className="home-thq-showcase-carousel-wrapper-elm">
+      <div className="showcase-carousel">
+        
+        {/* Slide 1 */}
+        <div className="showcase-slide">
+          <div className="showcase-card">
+            <img alt="Zelda Playhouse" src="/web9-1500w.png" loading="lazy" />
+            <div className="showcase-caption">
+              <h3 className="showcase-card-title">Link's Playhouse</h3>
+              <p className="showcase-card-description">Inspired by Legend of Zelda: Breath of the Wild</p>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Slide 2 */}
+        <div className="showcase-slide">
+          <div className="showcase-card">
+            <img alt="Hobbit Hole" src="/web14-1500w.png" loading="lazy" />
+            <div className="showcase-caption">
+              <h3 className="showcase-card-title">Hobbit Hole</h3>
+              <p className="showcase-card-description">An under-the-stairs fantasy playspace</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 3 */}
+        <div className="showcase-slide">
+          <div className="showcase-card">
+            <img alt="Farmhouse Tavern" src="/web8-1500w.png" loading="lazy" />
+            <div className="showcase-caption">
+              <h3 className="showcase-card-title">Farmhouse Tavern</h3>
+              <p className="showcase-card-description">Fantasy inspired tavern with farmhouse appeal</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 4 */}
+        <div className="showcase-slide">
+          <div className="showcase-card">
+            <img alt="Mystery Shack" src="/web10-1500w.png" loading="lazy" />
+            <div className="showcase-caption">
+              <h3 className="showcase-card-title">Mystery Shack</h3>
+              <p className="showcase-card-description">Playhouse inspired by Gravity Falls</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="process" className="home-thq-process-section-elm">
         <div className="home-thq-process-timeline-line-elm"></div>
