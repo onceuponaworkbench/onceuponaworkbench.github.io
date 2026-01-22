@@ -37,19 +37,19 @@ const Home = (props) => {
             </Link>
           </div>
           <div className="home-thq-hero-image-column-elm">
+            {/* The 'hero-featured-image' class in style.css handles the rounding and perspective */}
             <div className="hero-featured-image">
-              {/* Added inline style to prevent giant image bug */}
-              <img alt="Playhouse" src="/web1-1500h.png" loading="eager" style={{width: '100%', maxHeight: '500px', objectFit: 'cover'}} />
+              <img alt="Playhouse" src="/web1-1500h.png" loading="eager" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* FULL GALLERY CAROUSEL SECTION */}
+      {/* GALLERY CAROUSEL */}
       <section id="showcase" className="home-thq-showcase-section-elm">
-        <div id="gallery" className="home-thq-showcase-container-elm thq-section-max-width">
-          <h2 className="section-title thq-heading-2">Our Playhouse Gallery</h2>
-          <p className="section-subtitle thq-body-large">Each project is a unique creation designed to bring joy.</p>
+        <div id="gallery" className="home-thq-showcase-container-elm">
+          <h2 className="home-thq-section-title-elm1 section-title">Our Playhouse Gallery</h2>
+          <p className="home-thq-section-subtitle-elm1 section-subtitle">Unique creations designed for adventure.</p>
           <div className="home-thq-showcase-carousel-wrapper-elm">
             <div className="showcase-carousel">
               {[
@@ -73,47 +73,52 @@ const Home = (props) => {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <section id="faq" className="home-thq-faq-section-elm thq-section-padding">
-        <div className="thq-section-max-width">
-          <h2 className="section-title thq-heading-2">Frequently Asked Questions</h2>
-          <div className="home-thq-faq-grid-elm thq-grid-2">
-            <div className="faq-category">
-              <details className="faq-item">
-                <summary className="faq-question"><span className="faq-question-text">How much does a playhouse cost?</span></summary>
-                <div className="faq-answer"><p className="section-content">Typically $3,500 to $12,000 depending on complexity.</p></div>
-              </details>
-              <details className="faq-item">
-                <summary className="faq-question"><span className="faq-question-text">Do you offer payment plans?</span></summary>
-                <div className="faq-answer"><p className="section-content">Yes, we offer flexible deposit-based payment schedules.</p></div>
-              </details>
-            </div>
+      {/* FULL FAQ SECTION */}
+      <section id="faq" className="home-thq-faq-section-elm">
+        <h2 className="home-thq-section-title-elm3 section-title">Frequently Asked Questions</h2>
+        <div className="home-thq-faq-grid-elm">
+          <div className="faq-category">
+            <h3 className="faq-category-title">Pricing & Ordering</h3>
+            <details className="faq-item">
+              <summary className="faq-question"><span className="faq-question-text">How much does a custom playhouse cost?</span></summary>
+              <div className="faq-answer"><p className="section-content">Our playhouses typically range from $3,500 to $12,000 depending on size and features.</p></div>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question"><span className="faq-question-text">Do you offer payment plans?</span></summary>
+              <div className="faq-answer"><p className="section-content">Yes! We offer flexible payment plans with a deposit structure.</p></div>
+            </details>
+          </div>
+          <div className="faq-category">
+            <h3 className="faq-category-title">Timeline & Process</h3>
+            <details className="faq-item">
+              <summary className="faq-question"><span className="faq-question-text">How long does it take to build?</span></summary>
+              <div className="faq-answer"><p className="section-content">Most projects take 4-8 weeks from consultation to installation.</p></div>
+            </details>
           </div>
         </div>
       </section>
 
-      {/* CENTERED CONTACT SECTION */}
-      <section id="quote" className="home-thq-contact-section-elm thq-section-padding">
-        <div className="home-thq-contact-container-elm thq-section-max-width">
-          <div className="home-thq-contact-form-card-elm thq-flex-column">
-             <img alt="Logo" src="/website logo-1500h.png" style={{maxWidth: '150px', marginBottom: '20px'}} />
-             <h2 className="section-title thq-heading-2">Start Your Playhouse Build</h2>
-             <p className="section-subtitle thq-body-large" style={{textAlign: 'center'}}>Share your vision with us.</p>
-             <form action="/submit" method="POST" className="home-thq-contact-form-elm thq-flex-column" style={{width: '100%', alignItems: 'center'}}>
-                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      {/* CENTERED CONTACT FORM */}
+      <section id="quote" className="home-thq-contact-section-elm">
+        <div className="home-thq-contact-container-elm">
+          <div className="home-thq-contact-form-card-elm" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+             <img alt="Logo" src="/website logo-1500h.png" style={{maxWidth: '180px', marginBottom: '20px'}} />
+             <h2 className="section-title" style={{textAlign: 'center'}}>Start Your Playhouse Build</h2>
+             <form action="/submit" method="POST" className="home-thq-contact-form-elm" style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '450px', textAlign: 'center'}}>
                   <label className="contact-label">Your Name</label>
-                  <input type="text" name="name" placeholder="John Smith" className="contact-input thq-input" required style={{width: '100%', textAlign: 'center'}} />
+                  <input type="text" name="name" className="contact-input thq-input" style={{width: '100%'}} required />
                 </div>
-                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '450px', textAlign: 'center', marginTop: '15px'}}>
                   <label className="contact-label">Email Address</label>
-                  <input type="email" name="email" placeholder="you@example.com" className="contact-input thq-input" required style={{width: '100%', textAlign: 'center'}} />
+                  <input type="email" name="email" className="contact-input thq-input" style={{width: '100%'}} required />
                 </div>
-                <div className="contact-form-group" style={{width: '100%', maxWidth: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div className="contact-form-group" style={{width: '100%', maxWidth: '450px', textAlign: 'center', marginTop: '15px'}}>
                   <label className="contact-label">Tell Us Your Idea</label>
-                  <textarea name="idea" rows="5" placeholder="Describe your dream..." className="contact-textarea thq-input" required style={{width: '100%', textAlign: 'center'}}></textarea>
+                  <textarea name="idea" rows="5" className="contact-textarea thq-input" style={{width: '100%'}} required></textarea>
                 </div>
-                <button type="submit" className="home-thq-btn-elm2 btn-primary btn-lg btn thq-button-filled">
-                  Send My Quote Request
+                <button type="submit" className="home-thq-btn-elm2 btn-primary btn-lg btn" style={{marginTop: '25px'}}>
+                  Send Request
                 </button>
              </form>
           </div>
@@ -125,7 +130,7 @@ const Home = (props) => {
       <Script
         html={`
         <script>
-          // NAVIGATION TOGGLE
+          // NAV TOGGLE
           (function() {
             const menuBtn = document.querySelector('[data-thq="thq-menu-btn"]');
             const closeBtn = document.querySelector('[data-thq="thq-close-menu"]');
@@ -134,7 +139,7 @@ const Home = (props) => {
               menuBtn.onclick = () => { mobileMenu.style.display = 'flex'; mobileMenu.classList.add('thq-active'); };
             }
             if (closeBtn && mobileMenu) {
-              closeBtn.onclick = () => { mobileMenu.classList.remove('thq-active'); mobileMenu.style.display = 'none'; document.body.style.overflow = 'auto'; };
+              closeBtn.onclick = () => { mobileMenu.classList.remove('thq-active'); mobileMenu.style.display = 'none'; };
             }
           })();
         </script>
