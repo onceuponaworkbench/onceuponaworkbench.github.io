@@ -89,12 +89,45 @@
   --dl-layout-space-oneandhalfunits: 24px;
 }
 
+/* --- CORE ELEMENTS --- */
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.hero-featured-image {
+    width: 100% !important;
+    max-width: 600px !important; /* Forces the image to stay small */
+    height: auto !important;
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.hero-featured-image img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
+/* --- REMOVE HAMBURGER & FOOTER BADGE --- */
+[data-thq="thq-menu-btn"], 
+[data-thq="thq-mobile-menu"], 
+.navigation-burger-menu,
+.home-container21,
+[data-thq="thq-footer"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* --- BUTTONS & INPUTS --- */
 .button, .btn {
   color: var(--dl-color-theme-neutral-dark);
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-theme-neutral-dark);
-  border-width: 1px;
+  border: 1px solid var(--dl-color-theme-neutral-dark);
   border-radius: 4px;
   background-color: var(--dl-color-theme-neutral-light);
   cursor: pointer;
@@ -103,79 +136,11 @@
 .input, .textarea, .contact-input, .contact-textarea {
   color: var(--dl-color-theme-neutral-dark);
   padding: 0.5rem 1rem;
-  border-color: var(--dl-color-theme-neutral-dark);
-  border-width: 1px;
+  border: 1px solid var(--dl-color-theme-neutral-dark);
   border-radius: 4px;
-  background-color: var(--dl-color-theme-neutral-light);
 }
 
-.list {
-  width: 100%;
-  margin: 1em 0;
-  display: block;
-  padding-left: 1.5rem;
-  list-style-type: none;
-}
-
-/* --- MOBILE NAVIGATION FIXES --- */
-/* This prevents the "Frozen Page" issue when the menu is active */
-[data-thq="thq-mobile-menu"] {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  background-color: var(--color-surface);
-}
-
-/* When the menu has the active class, force it to show */
-[data-thq="thq-mobile-menu"].thq-active {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Ensure the background body is scrollable unless you explicitly want it locked */
-body {
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-}
-
-.teleport-show {
-  display: flex !important;
-  transform: none !important;
-}
-
-.thq-button-filled {
-  gap: var(--dl-layout-space-halfunit);
-  fill: var(--dl-color-theme-secondary1);
-  color: var(--dl-color-theme-secondary1);
-  cursor: pointer;
-  display: flex;
-  transition: 0.3s;
-  align-items: center;
-  font-weight: bold;
-  padding-top: var(--dl-layout-space-halfunit);
-  white-space: nowrap;
-  border-color: var(--dl-color-theme-primary1);
-  border-width: 1px;
-  padding-left: var(--dl-layout-space-oneandhalfunits);
-  border-radius: var(--dl-layout-radius-buttonradius);
-  padding-right: var(--dl-layout-space-oneandhalfunits);
-  padding-bottom: var(--dl-layout-space-halfunit);
-  justify-content: center;
-  background-color: var(--dl-color-theme-primary1);
-}
-
-.thq-button-filled:hover {
-  fill: var(--dl-color-theme-secondary2);
-  color: var(--dl-color-theme-secondary2);
-  border-color: var(--dl-color-theme-primary2);
-  background-color: var(--dl-color-theme-primary2);
-}
-
+/* --- TELEPORT DEFAULTS --- */
 .thq-section-padding {
   width: 100%;
   display: flex;
@@ -190,43 +155,6 @@ body {
   max-width: var(--dl-layout-size-maxwidth);
 }
 
-/* RESPONSIVE BREAKPOINTS */
 @media(max-width: 991px) {
-  .hero-featured-image { transform: perspective(1000px) rotateY(0deg); }
-  .about-sticky-image { position: relative; height: 400px; }
-}
-
-@media(max-width: 767px) {
-  .thq-section-padding { padding: var(--dl-layout-space-threeunits); }
-}
-
-/* --- HIDE TELEPORTHQ ATTRIBUTION BADGE --- */
-[data-thq="thq-footer"], .home-container21 {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-/* Remove hamburger menu completely */
-[data-thq="thq-menu-btn"], 
-[data-thq="thq-mobile-menu"],
-.home-container21 {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-}
-
-/* Fix Body Scroll if it was previously locked */
-body {
-    overflow-y: auto !important;
-}
-/* FORCE HIDE MENU ELEMENTS */
-[data-thq="thq-menu-btn"], 
-[data-thq="thq-mobile-menu"],
-.home-container21,
-.navigation-burger-menu {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+  .hero-featured-image { max-width: 100% !important; transform: none !important; }
 }
