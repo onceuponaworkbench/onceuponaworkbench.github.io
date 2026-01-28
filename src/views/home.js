@@ -164,11 +164,47 @@ details[open] .faq-icon { transform: rotate(180deg); }
       {/* ABOUT SECTION */}
       <section id="about" className="home-thq-about-section-elm">
         <div className="home-thq-about-container-elm">
-          <div className="about-sticky-image"><img alt="Forest" src="/web7-1500w.png" /></div>
-          <div className="home-thq-about-content-elm">
-            <h2 className="section-title">Our Story</h2>
-            <p className="section-content about-paragraph">Every child deserves a space where imagination runs free.</p>
+          
+          {/* Left Side: Sticky Image Area */}
+          <div className="about-sticky-image-wrapper">
+            <div className="about-sticky-image">
+              <img 
+                alt="Handcrafting a playhouse" 
+                src="/web7-1500w.png" 
+                loading="lazy" 
+              />
+              <div className="home-thq-about-image-badge-elm">
+                <span className="home-thq-about-badge-text-elm">Handcrafted in Utah</span>
+              </div>
+            </div>
           </div>
+
+          {/* Right Side: Content Area */}
+          <div className="home-thq-about-content-elm">
+            <div className="about-story-block">
+              <h2 className="home-thq-section-title-elm2 section-title">Our Story</h2>
+              <p className="section-content about-paragraph">
+                Once Upon a Workbench began with a simple belief: every child deserves a space where imagination runs free. What started as a small workshop in the heart of Utah has grown into a passion for building high-quality, custom playhouses that become the backdrop for your family's most cherished memories.
+              </p>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="home-thq-about-stats-elm">
+              <div className="about-stat-item">
+                <div className="about-stat-content">
+                  <span className="about-stat-number">150+</span>
+                  <span className="about-stat-label">Happy Families</span>
+                </div>
+              </div>
+              <div className="about-stat-item">
+                <div className="about-stat-content">
+                  <span className="about-stat-number">5+</span>
+                  <span className="about-stat-label">Years of Magic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
