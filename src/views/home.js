@@ -192,7 +192,7 @@ details[open] .faq-icon { transform: rotate(180deg); }
             <div className="home-thq-about-stats-elm">
               <div className="about-stat-item">
                 <div className="about-stat-content">
-                  <span className="about-stat-number">150+</span>
+                  <span className="about-stat-number">Many</span>
                   <span className="about-stat-label">Happy Families</span>
                 </div>
               </div>
