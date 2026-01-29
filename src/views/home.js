@@ -208,14 +208,61 @@ details[open] .faq-icon { transform: rotate(180deg); }
         </div>
       </section>
 
-      {/* FAQ SECTION */}
+     {/* FAQ SECTION */}
       <section id="faq" className="home-thq-faq-section-elm">
-        <h2 className="section-title">Frequently Asked Questions</h2>
-        <div className="home-thq-faq-grid-elm">
-          <details className="faq-item">
-            <summary className="faq-question">How much does it cost?</summary>
-            <div className="faq-answer"><p>$3,500 - $12,000</p></div>
-          </details>
+        <div className="home-thq-faq-container-elm thq-section-max-width">
+          <div className="home-thq-faq-header-elm">
+            <h2 className="home-thq-section-title-elm3 section-title">Frequently Asked Questions</h2>
+            <p className="home-thq-section-subtitle-elm2 section-subtitle">
+              Everything you need to know about our custom playhouse process.
+            </p>
+          </div>
+          
+          <div className="home-thq-faq-grid-elm">
+            {/* Question 1 */}
+            <details className="faq-item">
+              <summary className="faq-question">
+                <span className="faq-question-text">How much does a custom playhouse cost?</span>
+                <svg viewBox="0 0 24 24" className="faq-icon"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </summary>
+              <div className="faq-answer">
+                <p className="section-content">Our custom builds typically range from $3,500 to $12,000. Pricing depends on size, complexity, and specific features like electrical, insulation, or custom themes.</p>
+              </div>
+            </details>
+
+            {/* Question 2 */}
+            <details className="faq-item">
+              <summary className="faq-question">
+                <span className="faq-question-text">Do you offer payment plans?</span>
+                <svg viewBox="0 0 24 24" className="faq-icon"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </summary>
+              <div className="faq-answer">
+                <p className="section-content">Yes! We require a non refundable deposit for the design and plans, then can setup a payment plan with half being due up front and the remaining balance split into milestones throughout the project.</p>
+              </div>
+            </details>
+
+            {/* Question 3 */}
+            <details className="faq-item">
+              <summary className="faq-question">
+                <span className="faq-question-text">How long does the build process take?</span>
+                <svg viewBox="0 0 24 24" className="faq-icon"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </summary>
+              <div className="faq-answer">
+                <p className="section-content">Most custom built projects take 4–8 weeks from the final design approval to installation, depending on our current queue and the complexity of the build.</p>
+              </div>
+            </details>
+
+            {/* Question 4 */}
+            <details className="faq-item">
+              <summary className="faq-question">
+                <span className="faq-question-text">Do you ship outside of Utah?</span>
+                <svg viewBox="0 0 24 24" className="faq-icon"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </summary>
+              <div className="faq-answer">
+                <p className="section-content">Currently, we focus on serving families within Utah and surrounding mountain states to ensure high-quality delivery and on-site installation.</p>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
