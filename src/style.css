@@ -158,3 +158,8 @@ body {
 @media(max-width: 991px) {
   .hero-featured-image { max-width: 100% !important; transform: none !important; }
 }
+/* Ensure mobile menu remains hidden and doesn't interfere with the layout */
+[data-thq="thq-mobile-menu"], 
+.navigation-burger-menu {
+    display: none !important;
+}
