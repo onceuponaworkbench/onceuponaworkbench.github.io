@@ -79,14 +79,20 @@
 }
 
 @media(max-width: 767px) {
+  /* Hide the menu links (Projects, Process, etc.) */
+  .navigation-thq-navigation-menu-elm {
+    display: none !important;
+  }
+
+  /* Center the logo and title for a balanced look */
   .navigation-thq-navigation-container-elm {
+    justify-content: center !important;
     padding: var(--spacing-sm) var(--spacing-md);
   }
-  .navigation-thq-navigation-logo-text-elm {
-    font-size: var(--font-size-base);
-  }
-  /* Ensure menu links stay visible on mobile since burger is gone */
-  .navigation-thq-navigation-menu-elm {
-    display: flex !important;
+
+  /* Optional: Adjust logo size if it still feels cramped */
+  .navigation-image {
+    width: 35px;
+    height: 35px;
   }
 }
